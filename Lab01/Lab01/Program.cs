@@ -7,10 +7,18 @@ namespace Lab01
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Data type : ulong ");
-            Console.WriteLine("Size :" + sizeof(ulong));
-            Console.WriteLine("Minimum Value :" + ulong.MinValue);
-            Console.WriteLine("Maximum Value :" + ulong.MaxValue);
+            Random random = new Random();
+            int randomNumber = random.Next(0, 9);
+            Console.WriteLine(randomNumber);
+
+            Console.Write("Your number key:");
+            int Num = Convert.ToInt32(Console.ReadLine());
+
+           
+            bool a = Num > randomNumber;
+            Console.WriteLine("Truth is : {0} > {1} ",Num,randomNumber);
+            Console.WriteLine("Truth is : {0}", a);
+
 
 
         }
