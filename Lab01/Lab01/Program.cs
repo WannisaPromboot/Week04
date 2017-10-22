@@ -1,49 +1,17 @@
 ﻿using System;
-
-
-namespace Lab01
+public class MathTest
 {
-    class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
+        for (float i = 0; i < Math.PI * 2.0F; i += 0.3F)
         {
-            int a = 10, b = 20, x = 5, y = 2;
-
-            Console.WriteLine("a = 10, b = 20, x = 5, y = 2 ");
-            int answer1 = a + b;
-            Console.WriteLine("a + b={0}  ", answer1);
-
-            int answer2 = x - b;
-            Console.WriteLine("x - b={0}  ", answer2);
-
-            int answer3 = x * b;
-            Console.WriteLine("x * b={0}  ", answer3);
-
-            int answer4 = y / a;
-            Console.WriteLine("y / a={0}  ", answer4);
-
-            int answer5 = b % y;
-            Console.WriteLine("b % y={0}  ", answer5);
-
-            int answer6 = y + 10 % x;
-            Console.WriteLine("y + 10 % x={0}  ", answer6);
-           
-
-            int answer7 = a / 3 * 5;
-            Console.WriteLine("a / 3 * 5={0}  ", answer7);
-
-            int answer8 = 9 / 2 * a;
-            Console.WriteLine("9 / 2 * a={0}  ", answer8);
-
-            int answer9 = y % 8;
-            Console.WriteLine("y % 8={0}  ", answer9);
-
-            int answer10 = 100 * x + y % 2 - a;
-            Console.WriteLine("100 * x + y % 2 - a={0}  ", answer10);
-
-
-
-
+            Console.WriteLine("The cos of {0,10:F} = {1,-10:F6}" +
+            spaces(Math.Cos(i)) + "*", i, Math.Cos(i));
         }
+    }
+    private static string spaces(double val)
+    {
+        string SpaceString = new String(' ', ((int)(val * 10.0)) + 10);
+        return SpaceString;
     }
 }
